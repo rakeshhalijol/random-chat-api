@@ -82,7 +82,7 @@ def add_followingfriend(user, friend_name):
 connections = {}
 
 
-@app.websocket("/{username}/{reciver}")
+@app.websocket("/ws/{username}/{reciver}")
 async def mutual_chat(ws: WebSocket, username: str, reciver: str):
     print("Accepting...")
     await ws.accept()
